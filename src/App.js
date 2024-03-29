@@ -8,10 +8,8 @@ const Countdown = () => {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    // Set the launch date
-    const launchDate = new Date("2024-04-05T00:00:00Z");
+    const launchDate = new Date("2024-04-10T00:00:00Z");
 
-    // Update the countdown every second
     const interval = setInterval(() => {
       const currentDate = new Date();
       const timeDifference = launchDate - currentDate;
@@ -35,7 +33,6 @@ const Countdown = () => {
         setMinutes(remainingMinutes);
         setSeconds(remainingSeconds);
       } else {
-        // Countdown is over, do something here if needed
         clearInterval(interval);
       }
     }, 1000);
